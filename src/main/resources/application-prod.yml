@@ -1,0 +1,57 @@
+spring:
+  data:
+    mongodb:
+      database: prod_seaurl_db
+      uri: ${SEAURL_MONGODB_URI}
+
+signing:
+  key: ${SEAURL_SIGNING_KEY}
+
+web:
+  host: https://www.seaurl.com
+
+client:
+  id: seaurl
+  secret: ${SEAURL_CLIENT_SECRET}
+
+cookie:
+  domain: www.seaurl.com
+
+aliyun:
+  region: cn-hangzhou
+  access-key-id: ${SEAURL_ALIYUN_ACCESS_KEY_ID}
+  access-key-secret: ${SEAURL_ALIYUN_ACCESS_KEY_SECRET}
+  oss-bucket: com-seaurl-cdn
+  oss-bucket-region: oss-cn-hangzhou
+  oss-bucket-endpoint: https://oss-cn-hangzhou.aliyuncs.com
+  oss-bucket-cdn-host: https://cdn.seaurl.com
+  ram-sts-endpoint: sts.cn-hangzhou.aliyuncs.com
+  ram-access-key-id: ${SEAURL_ALIYUN_RAM_ACCESS_KEY_ID}
+  ram-access-key-secret: ${SEAURL_ALIYUN_RAM_ACCESS_KEY_SECRET}
+  ram-role-arn: ${SEAURL_ALIYUN_RAM_ROLE_ARN}
+  dashscope-api-key: ${SEAURL_DASHSCOPE_API_KEY}
+
+baiduyun:
+  access-key-id: ${SEAURL_BAIDUYUN_ACCESS_KEY_ID}
+  access-key-secret: ${SEAURL_BAIDUYUN_ACCESS_KEY_SECRET}
+
+deepseek:
+  access-url: https://api.deepseek.com
+  access-key-secret: ${SEAURL_DEEPSEEK_ACCESS_KEY_SECRET}
+
+doubao:
+  access-url: https://ark.cn-beijing.volces.com
+  access-key-secret: ${SEAURL_DOUBAO_ACCESS_KEY_SECRET}
+
+weather:
+  free-private-key: ${SEAURL_WEATHER_FREE_PRIVATE_KEY}
+  free-credent-id: ${SEAURL_WEATHER_FREE_CREDENT_ID}
+  free-project-id: ${SEAURL_WEATHER_FREE_PROJECT_ID}
+  standard-private-key: ${SEAURL_WEATHER_STANDARD_PRIVATE_KEY}
+  standard-credent-id: ${SEAURL_WEATHER_STANDARD_CREDENT_ID}
+  standard-project-id: ${SEAURL_WEATHER_STANDARD_PROJECT_ID}
+
+mail:
+  address: notice@system.seaurl.com
+  smtp:
+    password: ${SEAURL_MAIL_SMTP_PASSWORD}

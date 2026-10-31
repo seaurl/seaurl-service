@@ -1,0 +1,8 @@
+# 构建时排除无关文件（target/ 保留，因为 Dockerfile 需要 ADD JAR）
+.git/
+.gitignore
+.idea/
+.omo/
+docs/
+**/README.md
+**/*.md

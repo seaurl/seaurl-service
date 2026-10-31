@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      database: dev_seaurl_db
+      uri: ${SEAURL_MONGODB_URI:}

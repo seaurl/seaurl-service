@@ -1,0 +1,84 @@
+server:
+  port: ${SEAURL_SERVER_PORT:7777}
+
+spring:
+  webflux:
+    # 添加服务前缀，注意不能在上面的server.base-path这样加，有问题，只能在webflux中加
+    base-path: /api
+  application:
+    name: seaurl-service
+  config:
+    import: optional:file:./config/application-local.yml
+  profiles:
+    active: ${SEAURL_PROFILE:prod}
+  codec:
+    max-in-memory-size: 10MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+web:
+  host: ${SEAURL_WEB_HOST:https://www.seaurl.com}
+
+cookie:
+  domain: ${SEAURL_COOKIE_DOMAIN:www.seaurl.com}
+
+client:
+  id: ${SEAURL_CLIENT_ID:seaurl}
+  secret: ${SEAURL_CLIENT_SECRET}
+
+signing:
+  key: ${SEAURL_SIGNING_KEY}
+
+aliyun:
+  region: ${SEAURL_ALIYUN_REGION:cn-hangzhou}
+  access-key-id: ${SEAURL_ALIYUN_ACCESS_KEY_ID}
+  access-key-secret: ${SEAURL_ALIYUN_ACCESS_KEY_SECRET}
+  oss-bucket: ${SEAURL_ALIYUN_OSS_BUCKET:com-seaurl-cdn}
+  oss-bucket-region: ${SEAURL_ALIYUN_OSS_BUCKET_REGION:oss-cn-hangzhou}
+  oss-bucket-endpoint: ${SEAURL_ALIYUN_OSS_BUCKET_ENDPOINT:https://oss-cn-hangzhou.aliyuncs.com}
+  oss-bucket-cdn-host: ${SEAURL_ALIYUN_OSS_BUCKET_CDN_HOST:https://cdn.seaurl.com}
+  ram-sts-endpoint: ${SEAURL_ALIYUN_RAM_STS_ENDPOINT:sts.cn-hangzhou.aliyuncs.com}
+  ram-access-key-id: ${SEAURL_ALIYUN_RAM_ACCESS_KEY_ID}
+  ram-access-key-secret: ${SEAURL_ALIYUN_RAM_ACCESS_KEY_SECRET}
+  ram-role-arn: ${SEAURL_ALIYUN_RAM_ROLE_ARN}
+  dashscope-api-key: ${SEAURL_DASHSCOPE_API_KEY}
+
+mail:
+  address: ${SEAURL_MAIL_ADDRESS:notice@system.seaurl.com}
+  smtp:
+    password: ${SEAURL_MAIL_SMTP_PASSWORD}
+
+baiduyun:
+  access-key-id: ${SEAURL_BAIDUYUN_ACCESS_KEY_ID}
+  access-key-secret: ${SEAURL_BAIDUYUN_ACCESS_KEY_SECRET}
+
+deepseek:
+  access-url: ${SEAURL_DEEPSEEK_ACCESS_URL:https://api.deepseek.com}
+  access-key-secret: ${SEAURL_DEEPSEEK_ACCESS_KEY_SECRET}
+
+doubao:
+  access-url: ${SEAURL_DOUBAO_ACCESS_URL:https://ark.cn-beijing.volces.com}
+  access-key-secret: ${SEAURL_DOUBAO_ACCESS_KEY_SECRET}
+
+weather:
+  free-private-key: ${SEAURL_WEATHER_FREE_PRIVATE_KEY}
+  free-credent-id: ${SEAURL_WEATHER_FREE_CREDENT_ID}
+  free-project-id: ${SEAURL_WEATHER_FREE_PROJECT_ID}
+  standard-private-key: ${SEAURL_WEATHER_STANDARD_PRIVATE_KEY}
+  standard-credent-id: ${SEAURL_WEATHER_STANDARD_CREDENT_ID}
+  standard-project-id: ${SEAURL_WEATHER_STANDARD_PROJECT_ID}
+
+storage:
+  type: ${SEAURL_STORAGE_TYPE:local}
+  local:
+    base-path: ${SEAURL_STORAGE_LOCAL_BASE_PATH:./data/uploads}
+    base-url: ${SEAURL_STORAGE_LOCAL_BASE_URL:http://localhost:7777/api/uploads}
+  minio:
+    endpoint: ${SEAURL_STORAGE_MINIO_ENDPOINT:}
+    access-key: ${SEAURL_STORAGE_MINIO_ACCESS_KEY:}
+    secret-key: ${SEAURL_STORAGE_MINIO_SECRET_KEY:}
+    bucket: ${SEAURL_STORAGE_MINIO_BUCKET:seaurl}

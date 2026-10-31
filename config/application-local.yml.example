@@ -1,0 +1,27 @@
+# 复制此文件为 application-local.yml 并填入真实值
+# application-local.yml 不会提交到 git
+#
+# cp application-local.yml.example application-local.yml
+
+SEAURL_MONGODB_URI: mongodb://user:password@host:port/database
+SEAURL_REDIS_HOST: localhost
+SEAURL_REDIS_PASSWORD: your-redis-password
+SEAURL_SIGNING_KEY: your-jwt-signing-key
+SEAURL_CLIENT_SECRET: your-client-secret
+SEAURL_ALIYUN_ACCESS_KEY_ID: your-aliyun-access-key-id
+SEAURL_ALIYUN_ACCESS_KEY_SECRET: your-aliyun-access-key-secret
+SEAURL_ALIYUN_RAM_ACCESS_KEY_ID: your-ram-access-key-id
+SEAURL_ALIYUN_RAM_ACCESS_KEY_SECRET: your-ram-access-key-secret
+SEAURL_ALIYUN_RAM_ROLE_ARN: your-ram-role-arn
+SEAURL_DASHSCOPE_API_KEY: your-dashscope-api-key
+SEAURL_BAIDUYUN_ACCESS_KEY_ID: your-baiduyun-access-key-id
+SEAURL_BAIDUYUN_ACCESS_KEY_SECRET: your-baiduyun-access-key-secret
+SEAURL_DEEPSEEK_ACCESS_KEY_SECRET: your-deepseek-key
+SEAURL_DOUBAO_ACCESS_KEY_SECRET: your-doubao-key
+SEAURL_WEATHER_FREE_PRIVATE_KEY: your-weather-free-private-key
+SEAURL_WEATHER_FREE_CREDENT_ID: your-weather-free-credent-id
+SEAURL_WEATHER_FREE_PROJECT_ID: your-weather-free-project-id
+SEAURL_WEATHER_STANDARD_PRIVATE_KEY: your-weather-standard-private-key
+SEAURL_WEATHER_STANDARD_CREDENT_ID: your-weather-standard-credent-id
+SEAURL_WEATHER_STANDARD_PROJECT_ID: your-weather-standard-project-id
+SEAURL_MAIL_SMTP_PASSWORD: your-mail-smtp-password

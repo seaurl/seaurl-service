@@ -1,0 +1,17 @@
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+.claude
+.codex
+.superpowers
+target
+config/application-local.yml
+.omo
+.env
+*.env
+deploy
+data
+CLAUDE.md
+docker/
