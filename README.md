@@ -1,4 +1,4 @@
-seaurl-platform
+seaurl-service
 
 # 开发环境运行
 我们在config/application-local.yml中设置了账号，所以直接运行即可
